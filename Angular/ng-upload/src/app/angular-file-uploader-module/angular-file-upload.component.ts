@@ -29,8 +29,10 @@ import {
   export class AngularFileUploaderComponent implements OnChanges {
 
     // Inputs
+    // Inputs
+
     @Input()
-    config: AngularFileUploaderConfig | undefined;
+    config!: AngularFileUploaderConfig;
   
     @Input()
     resetUpload = false;
@@ -152,11 +154,9 @@ import {
         this.afterUpload = false;
       }
   
-      if (event.type === 'drop') {
-        fileList = event.dataTransfer.files;
-      } else {
+     
         fileList = event.target.files || event.srcElement.files;
-      }
+      
   
       // 'forEach' does not exist on 'filelist' that's why this good old 'for' is used.
       for (let i = 0; i < fileList.length; i++) {

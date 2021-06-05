@@ -10,10 +10,8 @@
         <!-- <span class='label label-info' id="upload-file-info{{id}}">{{allowedFiles[0]?.name}}</span> -->
       </div>
     </div>
-    <!-- Drag n Drop theme Ends -->
-    <label for="sel{{id}}" class="btn btn-primary btn-sm afu-select-btn"
-      *ngIf="!hideSelectBtn">{{replaceTexts?.selectFileBtn}}</label>
-    <input type="file" id="sel{{id}}" style="display: none" *ngIf="!hideSelectBtn" (change)="onChange($event)"
+    
+    <input type="file" id="sel{{id}}" *ngIf="!hideSelectBtn" (change)="onChange($event)"
       title="Select file" name="files[]" [accept]=formatsAllowed [attr.multiple]="multiple ? '' : null" />
     <button class="btn btn-info btn-sm resetBtn afu-reset-btn" (click)="resetFileUpload()"
       *ngIf="!hideResetBtn">{{replaceTexts?.resetBtn}}</button>
@@ -54,20 +52,6 @@
         <br>
   </div>
   
-  <!--/////////////////////////// ATTACH PIN THEME  //////////////////////////////////////////////////////////-->
-  <div *ngIf="theme == 'attachPin'" id="attachPin">
-    <div style="position:relative;padding-left:6px">
-      <a class='btn up_btn afu-attach-pin' (click)="attachpinOnclick()">
-        {{replaceTexts?.attachPinBtn}}
-        <i class="fa fa-paperclip" aria-hidden="true"></i>
-        <!-- <p style="margin-top:10px">({{formatsAllowed}}) Size limit- {{(convertSize(maxSize))}}</p> -->
-        <input type="file" id="sel{{id}}" (change)="onChange($event)" style="display: none" title="Select file"
-          name="files[]" [accept]=formatsAllowed [attr.multiple]="multiple ? '' : null" />
-        <br>
-      </a>
-      &nbsp;
-      <span class='label label-info' id="upload-file-info{{id}}">{{allowedFiles[0]?.name}}</span>
-    </div>
-  </div>
+
   
   
