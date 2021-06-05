@@ -12,39 +12,13 @@ export class AppComponent  {
   resetUpload3: boolean= false;
 
 
-  afuConfig1 : AngularFileUploaderConfig= {
+  Config : AngularFileUploaderConfig= {
     id: 112233,
     multiple: true,
     uploadAPI: {
       url: 'https://slack.com/api/files.upload',
     }
-  };
-
-  afuConfig2: AngularFileUploaderConfig = {
-    theme: 'attachPin',
-    hideProgressBar: true,
-    hideResetBtn: true,
-    maxSize: 1,
-    uploadAPI: {
-      url: 'https://slack.com/api/files.upload',
-    },
-    formatsAllowed: '.jpg,.png',
-    multiple: true,
-  };
-
-  afuConfig3: AngularFileUploaderConfig = {
-    theme: 'dragNDrop',
-    hideProgressBar: true,
-    hideResetBtn: true,
-    hideSelectBtn: true,
-    maxSize: 1,
-    uploadAPI: {
-      url: 'https://slack.com/api/files.upload',
-    },
-    formatsAllowed: '.jpg,.jpeg,.png',
-    multiple: true,
-  };
-
+  }; 
   constructor() {
   }
 
