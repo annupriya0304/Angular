@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "form-filler",
+    "version": "1.0",
+  
+    "description": "TAKE DETAILS OF THE FORM AND FILL IT WITH DEFAULT VALUE",
+  
+    "icons": {
+      "48": "icons/pp.jpg"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["formfill.js"]
+      }
+    ]
+  
+  }
